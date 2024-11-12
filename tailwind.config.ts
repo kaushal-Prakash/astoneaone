@@ -12,7 +12,10 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      
     },
   },
-  plugins: [],
+  plugins: [
+    
+  ],
 } satisfies Config;
