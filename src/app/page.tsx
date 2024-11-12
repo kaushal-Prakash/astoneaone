@@ -4,6 +4,7 @@ import TypewriterText from "@/components/typewriter text/TypewriterText";
 import Image from "next/image";
 import gsap from "gsap";
 import { useEffect, useState } from "react";
+import About from "@/components/about section/About";
 
 export default function Home() {
   const [loading,setLoading] = useState(true);
@@ -11,14 +12,16 @@ export default function Home() {
     const t1 = gsap.timeline();
     t1.fromTo(".home-logo",
       {scale:0 , opacity:0},
-      {scale:1, opacity:1, duration:1,delay:1}
+      {scale:1, opacity:1, duration:1,}
     ).fromTo('.home-diamond',
       {y:20,opacity:0},
       {opacity:1,y:0,duration:1,ease:"elastic.out"}
     ).fromTo(".home-tagline",
-      {y:30,opacity:0},
-      {y:0,opacity:1,scale:1,duration:1,ease:"elsatic.out"}
-    )
+      {y:20,opacity:0},
+      {y:0,opacity:1,duration:1,ease:"elsatic.out"}
+    );
+
+    setLoading(false);
   },[loading])
 
   return (
@@ -48,8 +51,9 @@ export default function Home() {
           <TypewriterText s="Trusted Care, Every Day" />
         </div>
 
-
       </div>
+
+      <About />
     </div>
   );
 }
