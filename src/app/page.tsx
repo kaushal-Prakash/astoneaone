@@ -21,7 +21,7 @@ export default function Home() {
       {opacity:1,scale:1,duration:1,delay:0.2}
     ).fromTo(".home-tagline",
       {scale:0,opacity:0},
-      {scale:0,opacity:1,duration:1,delay:0.2}
+      {scale:1,opacity:1,duration:1,delay:0.2}
     );
 
     setLoading(false);
