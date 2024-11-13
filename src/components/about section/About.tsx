@@ -87,8 +87,8 @@ function About() {
     const t2 = gsap.timeline({
       scrollTrigger: {
         trigger: ".about-commit",
-        start: "top 50%",
-        end: "top 90%",
+        start: "top 80%",
+        end: "top 20%",
         scrub: 1,
       },
     });
@@ -96,7 +96,7 @@ function About() {
     t2.fromTo(
       ".about-commit",
       { opacity: 0, y: 100 },
-      { opacity: 1, y: 0, duration: 1,stagger:0.4 }
+      { opacity: 1, y: 0, duration: 1,stagger:0.5 }
     );
   }, []);
 
