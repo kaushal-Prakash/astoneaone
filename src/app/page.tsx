@@ -17,11 +17,11 @@ export default function Home() {
       {scale:0 , opacity:0},
       {scale:1, opacity:1, duration:1,}
     ).fromTo('.home-diamond',
-      {y:20,opacity:0},
-      {opacity:1,y:0,duration:1,delay:0.2}
+      {scale:0,opacity:0},
+      {opacity:1,scale:1,duration:1,delay:0.2}
     ).fromTo(".home-tagline",
-      {y:50,opacity:0},
-      {y:0,opacity:1,duration:1,delay:0.2}
+      {scale:0,opacity:0},
+      {scale:0,opacity:1,duration:1,delay:0.2}
     );
 
     setLoading(false);
