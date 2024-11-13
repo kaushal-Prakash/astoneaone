@@ -1,12 +1,11 @@
-'use client'
+'use client';
 import { useState, useEffect } from "react";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import gsap from "gsap";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-  
-  
+
   useEffect(() => {
     const t1 = gsap.timeline();
     t1.from(".navbar", { y: -100, opacity: 0, duration: 1 })
@@ -27,40 +26,40 @@ function Navbar() {
 
     if (isOpen) {
       t2.play();
-    }
-    else{
+    } else {
       t2.play().reverse();
     }
-
   }, [isOpen]);
 
   return (
     <>
-      <div className="navbar w-full max-w-[1200px] mx-auto px-4 h-10 bg-transparent
-       md:h-20 border-b-2 rounded-b-lg backdrop-blur-sm z-10 flex justify-between">
-        <div className="h-full flex items-center px-5">
-          <h1 className="font-bold text-2xl">Astoneaone</h1>
+      <div className="navbar fixed w-full mx-auto px-4 h-10 bg-transparent
+       md:h-20 border-b-2 rounded-b-lg backdrop-blur-md z-10 flex justify-center items-center">
+        <div className="flex justify-between items-center w-full px-4 md:px-10">
+          <div className="h-full flex items-center">
+            <h1 className="font-bold text-2xl">Astoneaone</h1>
+          </div>
+          <div className="flex items-center md:hidden">
+            <AiOutlineMenu
+              className="h-6 w-6 cursor-pointer"
+              onClick={() => setIsOpen(true)}
+            />
+          </div>
+          <ul className="menu font-medium text-lg hidden gap-5 md:flex md:gap-7 items-center">
+            <li className="hover:text-blue-900 hover:underline transition-all duration-300">
+              <a href="#home">Home</a>
+            </li>
+            <li className="hover:text-blue-900 hover:underline transition-all duration-300">
+              <a href="#about">About</a>
+            </li>
+            <li className="hover:text-blue-900 hover:underline transition-all duration-300">
+              <a href="#contact">Contact</a>
+            </li>
+            <li className="hover:text-blue-900 hover:underline transition-all duration-300">
+              <a href="#leaders">Leaders</a>
+            </li>
+          </ul>
         </div>
-        <div className="flex items-center md:hidden px-5">
-          <AiOutlineMenu
-            className="h-6 w-6 cursor-pointer"
-            onClick={() => setIsOpen(true)}
-          />
-        </div>
-        <ul className="menu font-medium text-lg hidden gap-5 md:flex md:gap-7 mr-2 items-center">
-          <li className="hover:text-blue-900 hover:underline transition-all duration-300">
-            <a href="#home">Home</a>
-          </li>
-          <li className="hover:text-blue-900 hover:underline transition-all duration-300">
-            <a href="#about">About</a>
-          </li>
-          <li className="hover:text-blue-900 hover:underline transition-all duration-300">
-            <a href="#contact">Contact</a>
-          </li>
-          <li className="hover:text-blue-900 hover:underline transition-all duration-300">
-            <a href="#leaders">Leaders</a>
-          </li>
-        </ul>
       </div>
       <div className={`menu-container fixed top-0 left-0 w-full h-full bg-black bg-opacity-70 backdrop-blur-lg z-20 flex flex-col items-center justify-center transition duration-300 ease-in-out ${isOpen ? 'block' : 'hidden'}`}>
         <AiOutlineClose
