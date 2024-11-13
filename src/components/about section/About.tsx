@@ -5,6 +5,7 @@ import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import { useEffect } from "react";
 
+/* eslint react/no-unescaped-entities: "off" */
 const ProductCategories = [
   {
     title: "HERBONUTRIGENX",
@@ -34,7 +35,7 @@ const ProductCategories = [
     title: "QUADCEE",
     img: "https://astoneaone.com/Managepanel/images/NewProducts/18492024104947Prod_26_0.png",
     content:
-      "This one’s a bit enigmatic but could imply products related to Vitamin C or immunity-boosting supplements, considering the 'C' in the name.",
+      "This one's a bit enigmatic but could imply products related to Vitamin C or immunity-boosting supplements, considering the 'C' in the name.",
   },
   {
     title: "NATURAYU",
