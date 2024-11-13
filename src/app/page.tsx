@@ -6,6 +6,7 @@ import gsap from "gsap";
 import { useEffect, useState } from "react";
 import About from "@/components/about section/About";
 import Footer from "@/components/footer/Footer"
+import LeadSection from "@/components/leads section/LeadSection";
 
 export default function Home() {
   const [loading,setLoading] = useState(true);
@@ -26,7 +27,7 @@ export default function Home() {
   },[loading])
 
   return (
-    <div className="absolute inset-0 -z-10 min-h-screen w-full bg-white bg-[linear-gradient(to_right,#f0f0f0_1px,transparent_1px),linear-gradient(to_bottom,#f0f0f0_1px,transparent_1px)] bg-[size:6rem_4rem]">
+    <div id="home" className="absolute inset-0 -z-10 min-h-screen w-full bg-white bg-[linear-gradient(to_right,#f0f0f0_1px,transparent_1px),linear-gradient(to_bottom,#f0f0f0_1px,transparent_1px)] bg-[size:6rem_4rem]">
       <div className="relative z-10">
         <Navbar />
       </div>
@@ -55,6 +56,7 @@ export default function Home() {
       </div>
 
       <About />
+      <LeadSection />
       <Footer />
     </div>
   );

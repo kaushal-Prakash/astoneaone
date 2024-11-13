@@ -100,7 +100,7 @@ function About() {
   }, []);
 
   return (
-    <div className="w-full min-h-screen p-8 bg-gray-100">
+    <div className="w-full min-h-screen p-8 bg-gray-100" id="about">
       <div className="max-w-4xl mx-auto mt-24">
         <section className="mb-12">
           <h1 className="text-4xl font-bold mb-4 text-center text-blue-600 who-we">

@@ -19,9 +19,9 @@ const AboutComponent: React.FC<AboutComponentProps> = ({ title, content, img }) 
       const t1 = gsap.timeline({
         scrollTrigger: {
           trigger: ".about-category",
-          start:"top 90%",
+          start:"top 110%",
           end:"top -240%",
-          scrub: 0.3,
+          scrub: 0.1,
         }
       });
 
