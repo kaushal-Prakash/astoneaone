@@ -7,6 +7,7 @@ import { useEffect, useState } from "react";
 import About from "@/components/about section/About";
 import Footer from "@/components/footer/Footer"
 import LeadSection from "@/components/leads section/LeadSection";
+import Contact from "@/components/contact section/Contact";
 
 export default function Home() {
   const [loading,setLoading] = useState(true);
@@ -57,6 +58,7 @@ export default function Home() {
 
       <About />
       <LeadSection />
+      <Contact />
       <Footer />
     </div>
   );
