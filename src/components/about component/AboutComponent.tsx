@@ -20,8 +20,8 @@ const AboutComponent: React.FC<AboutComponentProps> = ({ title, content, img }) 
         scrollTrigger: {
           trigger: ".about-category",
           start:"top 90%",
-          end:"top -200%",
-          scrub: 1,
+          end:"top -240%",
+          scrub: 0.3,
         }
       });
 
@@ -32,28 +32,28 @@ const AboutComponent: React.FC<AboutComponentProps> = ({ title, content, img }) 
 
       const t2 = gsap.timeline({
         scrollTrigger: {
-          trigger: ".about-category",
+          trigger: ".about-img",
           start:"top 90%",
           end:"top -200%",
-          scrub: 1,
+          scrub: 0.3,
         }
       });
       t2.fromTo(".about-img",
-        {opacity:0,y:300},
-        {opacity:1,y:0,duration:1.5,stagger:0.4,delay:0.3}
+        {opacity:0,y:100},
+        {opacity:1,y:0,duration:1,stagger:0.4,delay:0.3}
       );
 
       const t3 = gsap.timeline({
         scrollTrigger: {
-          trigger: ".about-category",
+          trigger: ".about-h",
           start:"top 90%",
-          end:"top -200%",
-          scrub: 1,
+          end:"top -150%",
+          scrub: 0.4,
         }
       });
       t3.fromTo(".about-h",
-        {opacity:0,x:400},
-        {opacity:1,x:0,duration:1.5,stagger:0.4}
+        {opacity:0,x:50},
+        {opacity:1,x:0,duration:1,stagger:0.4}
       );
     }, []);
 

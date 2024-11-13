@@ -63,22 +63,39 @@ function About() {
     const t1 = gsap.timeline({
       scrollTrigger: {
         trigger: ".who-we",
-        start: "top 90%",
+        start: "top 130%",
         end: "top 70%",
-        scrub: 1,
+        scrub: 0.4,
       },
     });
 
     t1.fromTo(
       ".who-we",
       { opacity: 0, y: 200 },
-      { opacity: 1, y: 0, duration: 1}
-    ).fromTo(".who-we-p",
-        {opacity:0,y:150},
-        {opacity:1,y:0,duration:1,delay:0.2}
-    ).fromTo(".about-cat",
-        {opacity:0,y:200},
-        {opacity:1,y:0,duration:1,delay:0.1}
+      { opacity: 1, y: 0, duration: 1 }
+    ).fromTo(
+      ".who-we-p",
+      { opacity: 0, y: 150 },
+      { opacity: 1, y: 0, duration: 1, delay: 0.2 }
+    ).fromTo(
+      ".about-cat",
+      { opacity: 0, y: 200 },
+      { opacity: 1, y: 0, duration: 1, delay: 0.1 }
+    );
+
+    const t2 = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".about-commit",
+        start: "top 50%",
+        end: "top 90%",
+        scrub: 1,
+      },
+    });
+
+    t2.fromTo(
+      ".about-commit",
+      { opacity: 0, y: 100 },
+      { opacity: 1, y: 0, duration: 1,stagger:0.4 }
     );
   }, []);
 
@@ -102,6 +119,7 @@ function About() {
             </p>
           </div>
         </section>
+
         <section className="mb-16 mt-10">
           <h1 className="text-4xl font-bold mb-4 text-center text-blue-600 about-cat">
             Our Product Categories
@@ -119,10 +137,10 @@ function About() {
         </section>
 
         <section className="mb-12">
-          <h1 className="text-4xl font-bold mb-4 text-center text-blue-600">
+          <h1 className="text-4xl font-bold mb-4 text-center text-blue-600 about-commit">
             Our Commitment
           </h1>
-          <p className="text-lg text-gray-700 text-justify">
+          <p className="text-lg text-gray-700 text-justify about-commit">
             At Diamond Group, we are committed to providing products that
             combine quality and affordability. Our customers' satisfaction is
             our top priority, and we continuously strive to improve and innovate
@@ -131,11 +149,12 @@ function About() {
             remain competitive.
           </p>
         </section>
+
         <section>
-          <h1 className="text-4xl font-bold mb-4 text-center text-blue-600">
+          <h1 className="text-4xl font-bold mb-4 text-center text-blue-600 about-commit">
             Join Us on Our Journey
           </h1>
-          <p className="text-lg text-gray-700 text-justify">
+          <p className="text-lg text-gray-700 text-justify about-commit">
             We invite you to explore our products and experience the difference
             that Diamond Group brings to your everyday life. Thank you for
             choosing us as your trusted partner in health and personal care.

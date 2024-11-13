@@ -5,6 +5,7 @@ import Image from "next/image";
 import gsap from "gsap";
 import { useEffect, useState } from "react";
 import About from "@/components/about section/About";
+import Footer from "@/components/footer/Footer"
 
 export default function Home() {
   const [loading,setLoading] = useState(true);
@@ -54,6 +55,7 @@ export default function Home() {
       </div>
 
       <About />
+      <Footer />
     </div>
   );
 }
