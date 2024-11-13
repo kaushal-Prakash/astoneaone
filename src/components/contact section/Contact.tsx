@@ -46,7 +46,6 @@ function Contact() {
         start: "top 50%",
         end: "top 20%",
         scrub: 0.3,
-        markers:true
       },
     });
 
