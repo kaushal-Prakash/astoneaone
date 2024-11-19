@@ -22,8 +22,8 @@ export default function Home() {
           <Image 
             src="/logo.png" 
             alt="Astoneaone Logo"
-            width={300}
-            height={300}
+            width={400}
+            height={400}
             className="max-w-full h-auto home-logo custom-logo" // Apply custom CSS class
             layout="responsive" // This makes the image responsive
           />
