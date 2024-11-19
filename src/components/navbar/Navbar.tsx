@@ -1,8 +1,7 @@
-'use client';
+ 'use client';
 import { useState, useEffect } from "react";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import gsap from "gsap";
-
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -46,16 +45,16 @@ function Navbar() {
             />
           </div>
           <ul className="menu font-medium text-lg hidden gap-5 md:flex md:gap-7 items-center">
-            <li className="hover:text-blue-900 hover:underline transition-all duration-300">
+            <li className="hover:text-blue-900 font-semibold hover:-translate-y-1 transition-all duration-300">
               <a href="#home">Home</a>
             </li>
-            <li className="hover:text-blue-900 hover:underline transition-all duration-300">
+            <li className="hover:text-blue-900 font-semibold hover:-translate-y-1 transition-all duration-300">
               <a href="#about">About</a>
             </li>
-            <li className="hover:text-blue-900 hover:underline transition-all duration-300">
+            <li className="hover:text-blue-900 font-semibold hover:-translate-y-1 transition-all duration-300">
               <a href="#contact">Contact</a>
             </li>
-            <li className="hover:text-blue-900 hover:underline transition-all duration-300">
+            <li className="hover:text-blue-900 font-semibold hover:-translate-y-1 transition-all duration-300">
               <a href="#leaders">Leaders</a>
             </li>
           </ul>
